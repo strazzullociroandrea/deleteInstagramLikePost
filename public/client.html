@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Delete Likes - Client</title>
+  <style>
+    body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:20px}
+    button{padding:8px 12px;margin-right:8px}
+    .log{white-space:pre-wrap;background:#f7f7f7;padding:10px;border-radius:6px;height:200px;overflow:auto}
+    .status{margin-top:12px}
+    .small{font-size:0.9rem;color:#666}
+  </style>
+</head>
+<body>
+  <h1>Delete Likes - Client</h1>
+  <p class="small">Usa questa interfaccia per avviare il job sul server. Il job continuerà in esecuzione anche se chiudi questa pagina.</p>
+
+  <div>
+    <button id="startBtn">Avvia eliminazione</button>
+    <button id="stopBtn" disabled>Richiedi stop</button>
+    <button id="clearBtn">Rimuovi job locale</button>
+  </div>
+
+  <div class="status">
+    <strong>Job ID:</strong> <span id="jobId">—</span><br>
+    <strong>Stato:</strong> <span id="jobStatus">idle</span><br>
+    <strong>Totale eliminati:</strong> <span id="totalDeleted">0</span><br>
+    <strong>Info:</strong> <span id="info">—</span>
+  </div>
+
+  <h3>Log</h3>
+  <div class="log" id="log"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
